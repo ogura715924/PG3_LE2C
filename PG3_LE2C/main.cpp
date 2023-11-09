@@ -12,12 +12,12 @@
 //()関数呼び出し式
 
 //4ページラムダ式の戻り値と引数
-int main(int argc, const char* argv[]) {
-	auto fx = [](int i) {return i + 1; };
-
-	printf("%d", fx(2));
-	return 0;
-}
+//int main(int argc, const char* argv[]) {
+//	auto fx = [](int i) {return i + 1; };
+//
+//	printf("%d", fx(2));
+//	return 0;
+//}
 
 //5ページ外部変数のキャプチャ
 //int main(int argc, const char* argv[]) {
@@ -29,9 +29,9 @@ int main(int argc, const char* argv[]) {
 //}
 
 //6ページ
-//int main(int argc, const char* argv[]) {
-//	std::function<int(int)>fx = [](int i) {return i + 1; };
-//	auto fx2 = [](int i) {return i + 1; };
-//
-//	return 0;
-//}
+int main(int argc, const char* argv[]) {
+	std::function<int(int)>fx = [](int i) {return i + 1; };
+	auto fx2 = [](int i) {return i + 1; };
+
+	return 0;
+}
