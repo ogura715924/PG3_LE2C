@@ -2,14 +2,11 @@
 #include<Windows.h>
 #include <stdlib.h>
 #include<time.h>
-
-
+#include <functional>
 
 typedef void (*PFunc)(int*);
 int memory;
 int dice;
-
-
 
 //コールバック関数
 void DispResult(int* s) {
@@ -19,8 +16,6 @@ void DispResult(int* s) {
 
 }
 
-
-
 void setTimeout(PFunc p, int second) {
 	//コールバック関数を呼び出す,3秒待つ
 	Sleep(second * 1000);
@@ -29,20 +24,18 @@ void setTimeout(PFunc p, int second) {
 	p(&second);
 }
 
+int main(int argc, const char* argv[]) {
+	// サイコロ 1~6 をふる
+	unsigned int currentTime = time(nullptr);
+	srand(currentTime);
+	dice=rand() % 6 + 1;
 
-int main() {
-
-	printf("奇数なら1を偶数なら0を押してください\n");
+	[]() { printf("奇数なら1を偶数なら0を押してください\n"); }();
 
 	// プレイヤーの入力処理、奇数か偶数を入力させる
 	int mj;
 
-	// サイコロ 1 ~ をふる
-	unsigned int currentTime = time(nullptr);
-	srand(currentTime);
-	dice = rand() % 6 + 1;
-	memory = dice;
-
+	
 	scanf_s("%d", &mj);
 	if (mj == 1) {
 		printf("奇数\n");
@@ -56,10 +49,11 @@ int main() {
 	p = DispResult;
 	setTimeout(p, 3);
 
+	/*std::function<int(int)>dice = [](int i) {return  dice % 2; };
+	auto dice2 = [](int) {return dice % 2; };*/
 
 
-	memory %= 2;
-	if (mj == memory) {
+	if (mj == dice) {
 		printf("正解\n");
 	}
 	else {
