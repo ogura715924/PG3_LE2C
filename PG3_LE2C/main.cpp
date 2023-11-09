@@ -32,10 +32,10 @@ int main(int argc, const char* argv[]) {
 
 	[]() { printf("奇数なら1を偶数なら0を押してください\n"); }();
 
+	
 	// プレイヤーの入力処理、奇数か偶数を入力させる
 	int mj;
 
-	
 	scanf_s("%d", &mj);
 	if (mj == 1) {
 		printf("奇数\n");
@@ -48,9 +48,6 @@ int main(int argc, const char* argv[]) {
 
 	p = DispResult;
 	setTimeout(p, 3);
-
-	/*std::function<int(int)>dice = [](int i) {return  dice % 2; };
-	auto dice2 = [](int) {return dice % 2; };*/
 
 
 	if (mj == dice) {
