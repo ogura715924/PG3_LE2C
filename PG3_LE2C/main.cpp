@@ -49,13 +49,15 @@ int main(int argc, const char* argv[]) {
 	p = DispResult;
 	setTimeout(p, 3);
 
-
+	std::function<int(int)>fx = [](int i) {return i % 2; };
+	 dice= fx(dice);
+	//dice %= 2;
 	if (mj == dice) {
 		printf("³‰ğ\n");
 	}
 	else {
 		printf("•s³‰ğ\n");
 	}
-
+	//‚O‚ğ‰Ÿ‚µ‚½‚Æ‚«“š‚¦ˆá‚¤
 	return 0;
 }
