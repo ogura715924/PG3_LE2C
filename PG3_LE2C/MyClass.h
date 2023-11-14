@@ -1,12 +1,16 @@
 #pragma once
-#include<stadio>
+#include <stdio.h>
 
 //自作クラス
 class MyClass {
 public:
 	//自作メンバ関数
+	void Test();
 	void TestFunc();
+	void TestFunc2();
 private:
 	//メンバ関数ポインタ
-	void (Myclass::* pFunc)();
+	static void (MyClass::*pFuncTable[])();
+
+	int index_ = 0;
 };
