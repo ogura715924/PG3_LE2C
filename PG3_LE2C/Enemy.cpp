@@ -1,17 +1,19 @@
 #include "Enemy.h"
 
 void(Enemy::* Enemy::pFuncTable[])() = {
-	&Enemy::TestFunc,
-	&Enemy::TestFunc2
+	&Enemy::Approach,
+	&Enemy::Fire,
+	&Enemy::Leave
 };
 
-void Enemy::Test() {
-	(this->*pFuncTable[index_])();
-}
-void Enemy::TestFunc() {
-	printf("1");
+void Enemy::Approach() {
+	printf("Ú‹ß\n");
 	index_++;
 }
-void Enemy::TestFunc2() {
-	printf("2");
+void Enemy::Fire() {
+	printf("ËŒ‚\n");
+	index_++;
+}
+void Enemy::Leave() {
+	printf("—£’E\n");
 }

@@ -5,10 +5,13 @@
 class Enemy {
 public:
 	//自作メンバ関数
-	void Test();
-	void TestFunc();
-	void TestFunc2();
+	void Approach(); // 接近する
+	void Fire();     // 攻撃する
+	void Leave();    // 離脱する
 private:
+
+	
+
 	//メンバ関数ポインタ
 	static void (Enemy::* pFuncTable[])();
 
