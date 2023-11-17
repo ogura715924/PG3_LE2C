@@ -3,7 +3,5 @@
 
 int main() {
 	Enemy m;
-	m.Approach();
-	m.Fire();
-	m.Leave();
+	m.Update();
 }

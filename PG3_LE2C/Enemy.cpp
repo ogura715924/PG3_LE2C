@@ -8,12 +8,16 @@ void(Enemy::* Enemy::pFuncTable[])() = {
 
 void Enemy::Approach() {
 	printf("Ú‹ß\n");
-	index_++;
 }
 void Enemy::Fire() {
 	printf("ËŒ‚\n");
-	index_++;
 }
 void Enemy::Leave() {
 	printf("—£’E\n");
+}
+
+void Enemy::Update() {
+	for (int i = 0; i <= 2; i++) {
+		(this->*pFuncTable[i])();
+	}
 }
