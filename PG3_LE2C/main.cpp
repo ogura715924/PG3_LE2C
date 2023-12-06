@@ -1,28 +1,30 @@
 #include <stdio.h>
-template <typename T1,typename T2>
-
-
-//自作クラス
-class Box {
-public:
-	//メンバ変数
-	T1 height;
-	T2 width;
-
-	//コンストラクタ
-	Box(T1 height, T2 width) :height(height), width(width) {};
-
-	T1 Size() {
-		return static_cast<T1>(height * width);
-	}
-};
-
+#include"DeathEater.h"
+#include"Dementor.h"
+#include"Load.h"
 
 int main() {
-	Box<int,int>b1(10, 20);
-	Box<double,double>b2(1.2, 3.4);
+	DeathEater* death_eaters[3];
+	Load* voldemort;
 
-	printf("面積:%d", b1.Size());
-	printf("面積:%f", b2.Size());
+	//生成フェーズ
+	for (int i = 0; i < 2; i++) {
+		if (i < 1) {
+			death_eaters[i] = new Dementor;
+		}
+		else
+			death_eaters[i] = new Load;
+	}
+
+	//攻撃フェーズ
+	for (int i = 0; i < 2; i++) {
+		death_eaters[i]->Attack();
+	}
+
+	//破棄フェーズ
+	for (int i = 0; i < 2; i++) {
+		delete death_eaters[i];
+	}
+
 	return 0;
 }
