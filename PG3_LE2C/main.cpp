@@ -2,11 +2,9 @@
 #include"DeathEater.h"
 #include"Dementor.h"
 #include"Load.h"
-#include<stdio.h>
 
 int main() {
-	DeathEater* death_eaters[3];
-	Load* voldemort;
+	DeathEater* death_eaters[3]{};
 
 	//生成フェーズ
 	for (int i = 0; i < 2; i++) {

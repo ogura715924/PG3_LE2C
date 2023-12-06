@@ -8,7 +8,7 @@ public:
 	Dementor();
 	~Dementor();
 		//UŒ‚
-	virtual void Attack()override { printf("Dementer‚ÌUŒ‚"); };
+	 void Attack() override;
 
 private:
 };

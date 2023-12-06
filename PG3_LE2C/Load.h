@@ -5,9 +5,9 @@ class Load:public DeathEater
 {
 public:
 	Load();
-	~Load();
+	 ~Load();
 	//UŒ‚
-	virtual void Attack()override { printf("Dementer‚ÌUŒ‚"); };
+	 void Attack()override ;
 
 private:
 };
