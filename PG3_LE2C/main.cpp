@@ -1,38 +1,29 @@
 #include <stdio.h>
-#include"Dementor.h"
-#include"Load.h"
-#include"DeathEater.h"
+#include"Microwave.h"
+#include"Heating.h"
+#include"Decompression.h"
 
 int main() {
-	DeathEater* death_eaters[3]{};
+	Microwave* micro_wave[3]{};
 
 	//生成フェーズ
 	for (int i = 0; i < 2; i++) {
 		if (i < 1) {
-			death_eaters[i] = new Dementor;
+			micro_wave[i] = new Heating;
 		}
 		else
-			death_eaters[i] = new Load;
+			micro_wave[i] = new Decompression;
 	}
 
-	//攻撃フェーズ
+	//ボタンフェーズ
 	for (int i = 0; i < 2; i++) {
-		death_eaters[i]->Attack();
+		micro_wave[i]->Switch();
 	}
 
-	//攻撃フェーズ
-	for (int i = 0; i < 2; i++) {
-		death_eaters[i]->Wat();
-	}
-
-	//攻撃フェーズ
-	for (int i = 0; i < 2; i++) {
-		death_eaters[i]->Attack();
-	}
 
 	//破棄フェーズ
 	for (int i = 0; i < 2; i++) {
-		delete death_eaters[i];
+		delete micro_wave[i];
 	}
 
 	return 0;

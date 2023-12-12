@@ -127,15 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DeathEater.cpp" />
-    <ClCompile Include="Dementor.cpp" />
-    <ClCompile Include="Load.cpp" />
+    <ClCompile Include="Decompression.cpp" />
+    <ClCompile Include="Heating.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Microwave.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DeathEater.h" />
-    <ClInclude Include="Dementor.h" />
-    <ClInclude Include="Load.h" />
+    <ClInclude Include="Decompression.h" />
+    <ClInclude Include="Heating.h" />
+    <ClInclude Include="Microwave.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
