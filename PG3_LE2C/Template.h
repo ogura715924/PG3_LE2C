@@ -11,14 +11,21 @@ public:
 
 	//コンストラクタ
 	Template(T1 min, T2 max) :min(min), max(max) {};
-	double num = 0;
+	double doublenum = 0;
+	int intnum = 0;
+	float floatnum = 0;
+
 	T1 Min() {
 		if (min >= max) {
-			num = max;
+			doublenum = max;
+			intnum = max;
+			floatnum = max;
 		}
 		else if (min <= max) {
-			num = min;
+			doublenum = min;
+			intnum = min;
+			floatnum = min;
 		}
-		return static_cast<T1>(num);
+		return static_cast<T1>(min);
 	}
 };
