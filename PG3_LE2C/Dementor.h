@@ -9,6 +9,7 @@ public:
 	~Dementor();
 		//UŒ‚
 	 void Attack() override;
+	 void Wat() override;
 
 private:
 };

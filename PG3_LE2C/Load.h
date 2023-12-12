@@ -8,6 +8,7 @@ public:
 	 ~Load();
 	//UŒ‚
 	 void Attack()override ;
+	 void Wat()override;
 
 private:
 };

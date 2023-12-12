@@ -1,5 +1,14 @@
 #include "DeathEater.h"
 
+
+DeathEater::DeathEater() {
+}
+
+DeathEater::~DeathEater() {
+}
+
 void DeathEater::Attack() {
-	printf("‚ÌUŒ‚");
+}
+
+void DeathEater::Wat() {
 }

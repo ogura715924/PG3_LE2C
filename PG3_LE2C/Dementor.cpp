@@ -1,5 +1,19 @@
 #include "Dementor.h"
 
-void Dementor() {
-    printf("Dementer‚ÌUŒ‚");
+
+Dementor::Dementor() {
+    printf("DementerY‚Ü‚ê‚½\n");
+}
+
+Dementor::~Dementor() {
+    printf("Dementer€‚ñ‚¾\n");
+}
+
+
+void Dementor::Attack() {
+    printf("Dementer‚ÌUŒ‚\n");
+}
+
+void Dementor::Wat() {
+    printf("Dementer‚Ì‚È‚É\n");
 }
