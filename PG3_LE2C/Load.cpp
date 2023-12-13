@@ -11,6 +11,3 @@ Load::~Load() {
 void Load::Attack() {
     printf("Load‚ÌUŒ‚\n");
 }
-void Load::Wat() {
-    printf("Load‚Ì‚È‚É\n");
-}

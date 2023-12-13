@@ -4,7 +4,7 @@
 #include"DeathEater.h"
 
 int main() {
-	DeathEater* death_eaters[3]{};
+	IDeathEater* death_eaters[3]{};
 
 	//生成フェーズ
 	for (int i = 0; i < 2; i++) {
@@ -13,16 +13,6 @@ int main() {
 		}
 		else
 			death_eaters[i] = new Load;
-	}
-
-	//攻撃フェーズ
-	for (int i = 0; i < 2; i++) {
-		death_eaters[i]->Attack();
-	}
-
-	//攻撃フェーズ
-	for (int i = 0; i < 2; i++) {
-		death_eaters[i]->Wat();
 	}
 
 	//攻撃フェーズ

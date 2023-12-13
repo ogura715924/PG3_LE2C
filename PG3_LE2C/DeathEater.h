@@ -2,17 +2,11 @@
 #include<stdio.h>
 
 
-class DeathEater
+class IDeathEater
 {
 public://メンバ関数
-	//コンストラクタ
-	DeathEater();
-	//デストラクタ
-	virtual	~DeathEater();
 	//攻撃
-	virtual void Attack();
-	//なんか
-	virtual void Wat();
+	virtual void Attack()=0;
 
 protected://メンバ変数
 	//名前

@@ -13,7 +13,3 @@ Dementor::~Dementor() {
 void Dementor::Attack() {
     printf("Dementer‚ÌUŒ‚\n");
 }
-
-void Dementor::Wat() {
-    printf("Dementer‚Ì‚È‚É\n");
-}

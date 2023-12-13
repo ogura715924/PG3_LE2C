@@ -1,14 +1,13 @@
 #pragma once
 #include"DeathEater.h"
 
-class Load:public DeathEater
+class Load:public IDeathEater
 {
 public:
 	Load();
 	 ~Load();
 	//UŒ‚
 	 void Attack()override ;
-	 void Wat()override;
 
 private:
 };
