@@ -127,14 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="DeathEater.cpp" />
     <ClCompile Include="Dementor.cpp" />
+    <ClCompile Include="IShape.cpp" />
     <ClCompile Include="Load.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="DeathEater.h" />
     <ClInclude Include="Dementor.h" />
+    <ClInclude Include="IShape.h" />
     <ClInclude Include="Load.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
