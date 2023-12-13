@@ -4,10 +4,12 @@
 class Circle:public IShape
 {
 public:
-	 Cricle();
-	 ~Cricle();
+	Circle();
+	 ~Circle();
 	
-	void Size() override
+	 void Size() override;
 		void Draw() override;
-};
 
+private:
+
+};
