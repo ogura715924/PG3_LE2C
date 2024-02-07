@@ -2,6 +2,6 @@
 #include "Enemy.h"
 
 int main() {
-	Enemy m;
-	m.Update();
+	Enemy*enemy_=new Enemy();
+	enemy_->Update();
 }

@@ -5,6 +5,12 @@
 class Enemy {
 public:
 	void Update();
+
+	enum class Phase {
+		kProximity,
+		kire,
+		kLeave,
+	};
 private:
 	//©ìƒƒ“ƒoŠÖ”
 	void Approach(); // Ú‹ß‚·‚é
