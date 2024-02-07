@@ -1,28 +1,25 @@
 #include <stdio.h>
-#include"Dementor.h"
-#include"Load.h"
-#include"DeathEater.h"
+#include "DeathEater.h"
+#include <memory>
+#include "Circle.h"
+#include "Rectagle.h"
 
 int main() {
-	IDeathEater* death_eaters[3]{};
+	IShape* shape_eaters[3]{};
 
-	//生成フェーズ
-	for (int i = 0; i < 2; i++) {
-		if (i < 1) {
-			death_eaters[i] = new Dementor;
+	for (int i = 0; i < 2; i++)
+	{
+		if (i < 1)
+		{
+			shape_eaters[i] = new Circle;
 		}
-		else
-			death_eaters[i] = new Load;
-	}
-
-	//攻撃フェーズ
-	for (int i = 0; i < 2; i++) {
-		death_eaters[i]->Attack();
-	}
-
-	//破棄フェーズ
-	for (int i = 0; i < 2; i++) {
-		delete death_eaters[i];
+		else {
+			shape_eaters[i] = new Rectagle;
+		}
+		shape_eaters[i]->Size();
+		shape_eaters[i]->Draw();
+	
+		delete shape_eaters[i];
 	}
 
 	return 0;

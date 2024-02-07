@@ -11,5 +11,5 @@ public:
 		void Draw() override;
 
 private:
-
+	float radius = 10.0f;
 };
