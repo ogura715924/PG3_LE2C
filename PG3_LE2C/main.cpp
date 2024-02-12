@@ -3,5 +3,7 @@
 
 int main() {
 	Enemy*enemy_=new Enemy();
-	enemy_->Update();
+	for (int i = 0; i <= 2; i++) {
+		enemy_->Update();
+	}
 }
