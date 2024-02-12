@@ -4,13 +4,14 @@
 //自作クラス
 class Enemy {
 public:
-	void Update();
-
 	enum class Phase {
-		kProximity,
-		kire,
+		kPApproach,
+		kFire,
 		kLeave,
 	};
+
+	void Update();
+
 private:
 	//自作メンバ関数
 	void Approach(); // 接近する
@@ -20,6 +21,6 @@ private:
 	//メンバ関数ポインタ
 	static void (Enemy::* pFuncTable[])();
 
-	int index_ = 0;
 
+	Phase phase_ = Phase::kPApproach;
 };
